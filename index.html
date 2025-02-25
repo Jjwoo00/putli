@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.js"></script>
+  <style>
+    body {
+    background-image: url(bg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+
+    .cake {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .cake-layer {
+      width: 200px;
+      height: 80px;
+      background: #f7c6c7;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: -20px;
+      position: relative;
+    }
+
+    .cake-layer.middle {
+      width: 150px;
+      height: 70px;
+      background: #ff9a9e;
+    }
+
+    .cake-layer.top {
+      width: 100px;
+      height: 60px;
+      background: #f6e58d;
+      position: relative;
+    }
+
+    .candle {
+      width: 10px;
+      height: 40px;
+      background: #ff6f61;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+
+    .flame {
+      width: 10px;
+      height: 10px;
+      background: gold;
+      border-radius: 50%;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { transform: translateX(-50%) scale(1); }
+      to { transform: translateX(-50%) scale(1.2); }
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #ff3b30;
+    }
+  </style>
+</head>
+<body>
+  <div class="cake">
+    <div class="cake-layer"></div>
+    <div class="cake-layer middle"></div>
+    <div class="cake-layer top">
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Happy Birthday!</h2>
+    <p>Click the button below for a surprise!</p>
+    <button onclick="window.location.href='surprise.html'">Open Surprise 🎁</button>
+  </div>
+</body>
+</html>
